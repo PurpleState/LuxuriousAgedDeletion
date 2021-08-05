@@ -1,0 +1,23 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Website</title>
+    </head>
+    <body>
+        <h1>All posts</h1>
+        {% for blog_post in posts: %}
+            <h1>{{ blog_post["title"] }}</h1>
+            <h2>{{ blog_post["subtitle"] }}</h2>
+        {% endfor %}
+        <h1>Id is 2</h1>
+        {% for blog_post in posts: %}
+            {% if blog_post["id"]==2 %}
+                <h1>{{ blog_post["title"] }}</h1>
+                <h2>{{ blog_post["subtitle"] }}</h2>
+            {% endif %}
+        {% endfor %}
+    </body>
+    <footer>
+        <p>©️ Copyright {{ year }}! Built by Purple at Fummeto.</p>
+    </footer>
+</html>

@@ -15,6 +15,7 @@ def home():
     return render_template('index.html', num=random_number, year=current_year)
 
 @app.route('/guess/<name>')
+''' based on the name entered by user, this API predicts the gender and age of the user. Its for fun. '''
 def guess(name):
 
     gender_url = f'https://api.genderize.io/?name={name}'
